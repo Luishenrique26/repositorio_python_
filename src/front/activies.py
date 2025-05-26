@@ -93,7 +93,6 @@ class AddActivitie(TkinterBase):
                 for message in dict.values():
                     messagebox.showerror("Cadastro falhou", f"{message}")
 
-
 class ListActivies(TkinterBase):
     def __init__(self, master: Tk):
         self.master = master
@@ -215,7 +214,6 @@ class ListActivies(TkinterBase):
         row[1].destroy()  # botão update
         row[2].destroy()  # botão delete
         self.rows[row_idx - 1] = None
-
 
 class UpdateActivitie(TkinterBase):
     def __init__(self, master: Tk, **kwargs):
