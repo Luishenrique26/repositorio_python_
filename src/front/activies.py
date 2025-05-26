@@ -214,6 +214,7 @@ class ListActivies(TkinterBase):
         row[1].destroy()  # botão update
         row[2].destroy()  # botão delete
         self.rows[row_idx - 1] = None
+        messagebox.showinfo("Deletado com sucesso!","Atividade deletada com sucesso!")
 
 class UpdateActivitie(TkinterBase):
     def __init__(self, master: Tk, **kwargs):
