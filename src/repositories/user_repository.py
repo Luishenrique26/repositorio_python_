@@ -3,6 +3,23 @@ from src.domain.entities import UserEntity
 
 
 class UserRepository:
+
+    def get_all(self):
+        with conection_db() as cursor:
+            query = cursor.execute(
+                """
+                SELECT * FROM users
+                """    
+            ).fetchall()
+        return None if not query else [
+            {
+                "user_id": q[0],
+                "username": q[1],
+                "email": q[2],
+            } 
+            for q in query
+        ]
+    
     def get_user(self, username: str) -> dict | None:
         with conection_db() as cursor:
             query = cursor.execute(
@@ -61,3 +78,13 @@ class UserRepository:
             "password": query[3],
             "created_at": query[4],
         }
+
+
+    def count():
+        with conection_db() as cursor:
+            query = cursor.execute(
+                """
+                SELECT COUNT(*) FROM users
+            """
+            ).fetchone()
+        return query 

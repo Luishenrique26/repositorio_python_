@@ -30,3 +30,6 @@ class ActiviesService:
 
     def delete_activie(self, id: int) -> dict:
         return self.activies_repository.delete(id)
+
+    def total_activie(self):
+        return self.activies_repository.count()

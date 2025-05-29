@@ -9,6 +9,8 @@ class UserService:
     def __init__(self) -> None:
         self.user_repository = UserRepository()
 
+    def get_all_user(self):
+        return self.user_repository.get_all()
     def create_user(self, dto: UserDTO) -> dict:
         user_exists = self.user_repository.get_user_by_email(dto.email)
 
@@ -20,3 +22,6 @@ class UserService:
         ).decode()
         entity = UserEntity.create(dto)
         return self.user_repository.create(entity)
+
+    def total_users(self):
+        return self.user_repository.count()

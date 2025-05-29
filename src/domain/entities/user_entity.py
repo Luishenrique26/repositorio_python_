@@ -16,5 +16,5 @@ class UserEntity:
         self.created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
 
     @staticmethod
-    def create(dto: UserDTO):
+    def create(dto: UserDTO) -> 'UserEntity':
         return UserEntity(username=dto.username, email=dto.email, password=dto.password)

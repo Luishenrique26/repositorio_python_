@@ -133,3 +133,13 @@ class ActiviesRepository:
                 (id,),
             ).fetchone()
         return query
+
+    
+    def count():
+        with conection_db() as cursor:
+            query = cursor.execute(
+                """
+                SELECT COUNT(*) FROM activities
+            """
+            ).fetchone()
+        return query

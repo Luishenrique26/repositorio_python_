@@ -5,7 +5,7 @@ class TkinterBase:
     def __init__(self, master: Tk) -> None:
         self.master = master
 
-    def open_window(self, window=None, destroy=False, **kwargs):
+    def open_window(self, window=None, destroy=False, **kwargs) -> None:
         if not destroy:
             self.master.destroy()
         new_window = Tk()
