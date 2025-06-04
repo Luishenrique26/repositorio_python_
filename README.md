@@ -34,7 +34,7 @@ Listagem de todas as atividades criadas
 
 ## 🧰 Requisitos
 
-Certifique-se de que você tem o Python instalado, utilizando o Tkinter como interface gráfica, desenvolver e implementar funcionalidades de CRUD. Criar, Editar, e Excluir na aplicação, aproveitando o poder do SQL. A aplicação utiliza apenas bibliotecas padrão, então não há necessidade de instalar pacotes externos.
+Certifique-se de que você tem o Python instalado, utilizando o Tkinter como interface gráfica, desenvolver e implementar funcionalidades. Criar, Editar, e Excluir na aplicação, aproveitando o poder do SQL. A aplicação utiliza apenas bibliotecas padrão, então não há necessidade de instalar pacotes externos.
 
 
 ## ✅ Dependências
