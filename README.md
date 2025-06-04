@@ -45,7 +45,7 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 - Bcrypt
 
 ## 🗂️ Estrutura do Projeto
-
+```sh
 ├── database/
 
 ├── src/
@@ -91,7 +91,7 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 ├── relatorio.log
 
 ├── requirements.txt
-
+```
 
 
 ##  💻 Comando para instalar o requiriments.txt em sua máquina
