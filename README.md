@@ -59,7 +59,7 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 
 - pip install -r requirements.txt
 
-
+-
 
   
 
