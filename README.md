@@ -51,25 +51,45 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 ├── src/
 
 │   ├── common/
+
 │   ├── domain/
+
 │   ├── front/
+
 │   │   ├── activities/
+
 │   │   │   ├── init.py
+
 │   │   │   ├── add_activities.py
+
 │   │   │   ├── list_activities.py
+
 │   │   │   ├── update_activities.py
+
 │   │   ├── init.py
+
 │   │   ├── login.py
+
 │   │   ├── register.py
+
 │   │   ├── report.py
+
 │   ├── repositories/
+
 │   ├── services/
+
 │   ├── init.py
+
 ├── .gitignore
+
 ├── database.db
+
 ├── main.py
+
 ├── README.md
+
 ├── relatorio.log
+
 ├── requirements.txt
 
 
