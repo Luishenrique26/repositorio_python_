@@ -9,7 +9,7 @@ class Register(TkinterBase):
     def __init__(self, master: Tk) -> None:
         self.master = master
         self.master.title("Tela de Cadastro")
-        self.master.geometry("350x250")
+        self.master.geometry("450x250")
         self.master.resizable(True, True)
         self.master.configure(bg="#2C3E50")  # Cor de fundo moderna
 
@@ -55,7 +55,7 @@ class Register(TkinterBase):
             self.master.destroy()
             self.open_window(ListActivies, destroy=True)
         except (ValidationError, ValueError) as e:
-            if isinstance(e, ValueError):
+            if type(e) == ValueError:
                 messagebox.showerror("Erro", f"{e}")
             else:
                 dict_errors = {f"{error['loc'][0]}_message": error["msg"].replace("Value error, ", "") for error in e.errors()}

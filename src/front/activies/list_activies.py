@@ -8,8 +8,6 @@ class ListActivies(TkinterBase):
     def __init__(self, master: Tk) -> None:
         from .add_activies import AddActivitie
 
-
-        
         self.master = master
         self.master.title("Lista de atividades do Projeto social")
         self.master.geometry("900x400")
@@ -61,6 +59,9 @@ class ListActivies(TkinterBase):
             }
             for x in data
         ]
+
+        # 👉 Linha única de log adicionada
+        import logging; logging.getLogger(__name__).info(data)
 
         for idx, item in enumerate(data):
             self.add_row(item, idx + 2)
@@ -125,4 +126,3 @@ class ListActivies(TkinterBase):
         row[2].destroy()
         self.rows[row_idx - 2] = None
         messagebox.showinfo("Deletado com sucesso!", "Atividade deletada com sucesso!")
-

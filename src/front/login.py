@@ -10,7 +10,7 @@ class Login(TkinterBase):
     def __init__(self, master: Tk) -> None:
         self.master = master
         self.master.title("Tela de Login")
-        self.master.geometry("350x250")
+        self.master.geometry("450x250")
         self.master.resizable(True, True)
         self.master.configure(bg="#2C3E50")  # Cor de fundo moderna
 
