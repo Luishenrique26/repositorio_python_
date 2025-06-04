@@ -7,8 +7,8 @@
 
 ## 🔹 Integrantes do Grupo
 
-- Gabriel Souza (Matrícula: 202408151391 )
-- Luis Henrique (Matrícula: 202403317788 )
+- Gabriel Souza (Matrícula: 202408151391)
+- Luis Henrique (Matrícula: 202403317788)
 - Lucas Thomaz (Matrícula: 202403317753)
 - Emerson Nascimento (Matrícula: 202403317771)
 
