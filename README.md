@@ -46,13 +46,7 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 
 ## 🗂️ Estrutura do Projeto
 
-├── main.py            
-├── add_activies.py       
-├── list_activies.py       
-├── update_activies.py        
-├── register.py  
-├── login.py           
-└── README.md
+Emerson Nascimento (ajeitar a estrutura do projeto para hj) o grupo agradece, NAO FAÇA MERDA PFV
 
 ##  💻 Comando para instalar o requiriments.txt em sua máquina
 
