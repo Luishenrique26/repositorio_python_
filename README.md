@@ -12,7 +12,7 @@
 - Lucas Thomaz (Matrícula: 202403317753)
 - Emerson Nascimento (Matrícula: 202403317771)
 
-# Nome da Aplicação
+# 🔹 Nome da Aplicação
 Sistema de gerenciamento de atividades de projetos sociais
 
   <img src='https://cdn.discordapp.com/attachments/1273399725479039101/1377443880231764028/BCO.png?ex=68403c54&is=683eead4&hm=0212fb17c84a1072526576aedd2a91859b8ad9767af8c03bdf30d53c71dcf1ba&'/>
@@ -43,7 +43,6 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 - Tkinter
 - Pydantic
 - Bcrypt
-
 
 ## 🗂️ Estrutura do Projeto
 
