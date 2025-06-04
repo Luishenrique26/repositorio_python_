@@ -47,7 +47,9 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 ## 🗂️ Estrutura do Projeto
 
 ├── database/
+
 ├── src/
+
 │   ├── common/
 │   ├── domain/
 │   ├── front/
