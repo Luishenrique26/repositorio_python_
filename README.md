@@ -48,11 +48,49 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 ```sh
 ├── database/
 
+│   ├── migrations/
+
+│   │   ├── sql/
+
+│   │   │   ├── 01_create_table_user.sql
+
+│   │   │   ├── 02_create_table_activities.sql
+
+│   │   │   ├── __init__.py
+
+│   │   │   ├── migrations.py
+
+│   │   ├── config.py
+
 ├── src/
 
 │   ├── common/
 
+│   │   ├── base.py
+
+│   │   ├── utils.py  
+
 │   ├── domain/
+
+│   │   ├── dtos/
+
+│   │   │   ├── __init__.py
+
+│   │   │   ├── activities_dto.py
+
+│   │   │   ├── login_dto.py
+
+│   │   │   ├── user_dto.py
+
+│   ├── entities/
+
+│   │   ├── __init__.py
+
+│   │   ├── activities_entity.py
+
+│   │   ├── user_entity.py
+
+│   │   ├── __init__.py
 
 │   ├── front/
 
@@ -66,7 +104,7 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 
 │   │   │   ├── update_activities.py
 
-│   │   ├── init.py
+│   │   ├── __init__.py
 
 │   │   ├── login.py
 
@@ -76,9 +114,23 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 
 │   ├── repositories/
 
+│   │   ├── __init__.py
+
+│   │   ├── activities_repository.py
+
+│   │   ├── user_repository.py
+
 │   ├── services/
 
-│   ├── init.py
+│   │   │   ├── __init__.py
+
+│   │   │   ├── activities_service.py
+
+│   │   │   ├── auth_service.py
+
+│   │   │   ├── user_service.py
+
+├── __init__.py
 
 ├── .gitignore
 
