@@ -46,6 +46,31 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 
 ## 🗂️ Estrutura do Projeto
 
+├── database/
+├── src/
+│   ├── common/
+│   ├── domain/
+│   ├── front/
+│   │   ├── activities/
+│   │   │   ├── init.py
+│   │   │   ├── add_activities.py
+│   │   │   ├── list_activities.py
+│   │   │   ├── update_activities.py
+│   │   ├── init.py
+│   │   ├── login.py
+│   │   ├── register.py
+│   │   ├── report.py
+│   ├── repositories/
+│   ├── services/
+│   ├── init.py
+├── .gitignore
+├── database.db
+├── main.py
+├── README.md
+├── relatorio.log
+├── requirements.txt
+
+
 
 ##  💻 Comando para instalar o requiriments.txt em sua máquina
 
