@@ -43,7 +43,7 @@ Certifique-se de que você tem o Python instalado, utilizando o Tkinter como int
 - Tkinter
 - Pydantic
 - Bcrypt
-- CRUD
+
 
 ## 🗂️ Estrutura do Projeto
 
