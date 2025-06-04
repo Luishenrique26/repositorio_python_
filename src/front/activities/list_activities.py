@@ -1,12 +1,12 @@
 from tkinter import Tk, Label, Button, messagebox
 from src.common.utils import date_to_str, datetime_to_str
-from src.services import ActiviesService
+from src.services import ActivitiesService
 from src.common.base import TkinterBase
-from .update_activies import UpdateActivitie
+from .update_activities import UpdateActivitie
 
-class ListActivies(TkinterBase):
+class ListActivities(TkinterBase):
     def __init__(self, master: Tk) -> None:
-        from .add_activies import AddActivitie
+        from .add_activities import AddActivitie
 
         self.master = master
         self.master.title("Lista de atividades do Projeto social")
@@ -44,8 +44,8 @@ class ListActivies(TkinterBase):
             Label(self.master, text=text, font=("Arial", 10, "bold"), bg="#2C3E50", fg="white").grid(row=1, column=col, padx=5, pady=5)
 
     def render_data(self) -> None:
-        service = ActiviesService()
-        data = service.get_activies()
+        service = ActivitiesService()
+        data = service.get_activities()
         if not data:
             return
         data = [
@@ -118,8 +118,8 @@ class ListActivies(TkinterBase):
             return
 
         for widget in row[0]:
-            service = ActiviesService()
-            service.delete_activie(values["activitie_id"])
+            service = ActivitiesService()
+            service.delete_activitie(values["activitie_id"])
             widget.destroy()
 
         row[1].destroy()

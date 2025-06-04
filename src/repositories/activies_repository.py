@@ -1,9 +1,9 @@
 from database.config import conection_db
-from src.domain.entities import ActiviesEntity
+from src.domain.entities import ActivitiesEntity
 
 
-class ActiviesRepository:
-    def get_activies(self):
+class ActivitiesRepository:
+    def get_activities(self):
         with conection_db() as cursor:
             query = cursor.execute(
                 """
@@ -27,7 +27,7 @@ class ActiviesRepository:
             ]
         )        
 
-    def get_activie(self, name: str):
+    def get_activitie(self, name: str):
         with conection_db() as cursor:
             query = cursor.execute(
                 """
@@ -49,7 +49,7 @@ class ActiviesRepository:
             }
         )
 
-    def get_activie_by_id(self, id: int):
+    def get_activitie_by_id(self, id: int):
         with conection_db() as cursor:
             query = cursor.execute(
                 """
@@ -71,7 +71,7 @@ class ActiviesRepository:
             }
         )
     
-    def create(self, entity: ActiviesEntity) -> dict:
+    def create(self, entity: ActivitiesEntity) -> dict:
         with conection_db() as cursor:
             query = cursor.execute(
                 """
@@ -97,7 +97,7 @@ class ActiviesRepository:
                 "updated_at": query[6],
             }
 
-    def update(self, entity: ActiviesEntity, id: int) -> dict:
+    def update(self, entity: ActivitiesEntity, id: int) -> dict:
         with conection_db() as cursor:
             query = cursor.execute(
                 """

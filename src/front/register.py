@@ -3,7 +3,7 @@ from pydantic import ValidationError
 from src.domain.dtos import UserDTO
 from src.services import UserService
 from src.common.base import TkinterBase
-from .activies import ListActivies
+from .activities import ListActivities
 
 class Register(TkinterBase):
     def __init__(self, master: Tk) -> None:
@@ -53,7 +53,7 @@ class Register(TkinterBase):
             service.create_user(data)
             messagebox.showinfo("Cadastro bem-sucedido", f"Bem-vindo, {data.username}!")
             self.master.destroy()
-            self.open_window(ListActivies, destroy=True)
+            self.open_window(ListActivities, destroy=True)
         except (ValidationError, ValueError) as e:
             if type(e) == ValueError:
                 messagebox.showerror("Erro", f"{e}")

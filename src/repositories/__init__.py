@@ -1,4 +1,4 @@
-from .activies_repository import ActiviesRepository
+from .activies_repository import ActivitiesRepository
 from .user_repository import UserRepository
 
-__all__ = ["UserRepository", "ActiviesRepository"]
+__all__ = ["UserRepository", "ActivitiesRepository"]

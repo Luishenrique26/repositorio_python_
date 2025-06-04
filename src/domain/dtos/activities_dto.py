@@ -1,10 +1,10 @@
 from datetime import date, datetime
 from pydantic import BaseModel, field_validator
 from typing import Optional
-from src.common.utils import str_to_date, str_to_datetime
+from src.common.utils import str_to_date
 
 
-class ActiviesDTO(BaseModel):
+class ActivitiesDTO(BaseModel):
     name: str
     description: Optional[str]
     start_date: date
@@ -50,7 +50,7 @@ class ActiviesDTO(BaseModel):
         return value
 
 
-class UpdateActivitieDTO(ActiviesDTO):
+class UpdateActivitieDTO(ActivitiesDTO):
     activitie_id: int
     #created_at: datetime
 

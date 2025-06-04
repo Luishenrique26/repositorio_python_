@@ -1,4 +1,4 @@
-from .activies_entity import ActiviesEntity
+from .activities_entity import ActivitiesEntity
 from .user_entity import UserEntity
 
-__all__ = ["ActiviesEntity", "UserEntity"]
+__all__ = ["ActivitiesEntity", "UserEntity"]

@@ -2,7 +2,7 @@ from tkinter import Button, Entry, Label, Tk, messagebox
 from pydantic import ValidationError
 from src.domain.dtos import LoginDTO
 from src.services import AuthService
-from .activies import ListActivies
+from .activities import ListActivities
 from .register import Register
 from src.common.base import TkinterBase
 
@@ -44,7 +44,7 @@ class Login(TkinterBase):
             service.login(data.username, data.password)
             messagebox.showinfo("Login bem-sucedido", f"Bem-vindo {data.username}!")
             self.master.destroy()
-            self.open_window(ListActivies, destroy=True)
+            self.open_window(ListActivities, destroy=True)
         except (ValidationError, ValueError) as e:
             if isinstance(e, ValueError):
                 messagebox.showerror("Erro", f"{e}")

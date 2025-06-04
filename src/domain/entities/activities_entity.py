@@ -1,9 +1,9 @@
 from datetime import datetime
-from src.domain.dtos import ActiviesDTO
+from src.domain.dtos import ActivitiesDTO
 from datetime import datetime, date
 from typing import Optional
 
-class ActiviesEntity:
+class ActivitiesEntity:
     def __init__(
         self,
         name: str,
@@ -19,5 +19,5 @@ class ActiviesEntity:
         self.updated_at = datetime.now()
 
     @staticmethod
-    def create(dto: ActiviesDTO) -> "ActiviesEntity":
-        return ActiviesEntity(dto.name,dto.description, dto.start_date, dto.end_date)
+    def create(dto: ActivitiesDTO) -> "ActivitiesEntity":
+        return ActivitiesEntity(dto.name,dto.description, dto.start_date, dto.end_date)

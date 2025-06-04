@@ -1,6 +1,6 @@
 from tkinter import Tk, Label, Button, messagebox, Entry
 from src.domain.dtos import UpdateActivitieDTO
-from src.services import ActiviesService
+from src.services import ActivitiesService
 from src.common.base import TkinterBase
 
 from pydantic import ValidationError
@@ -10,7 +10,7 @@ from pydantic import ValidationError
 class UpdateActivitie(TkinterBase):
     def __init__(self, master: Tk, **kwargs) -> None:
         #Foi importado aqui por causa de erro de importação circular.
-        from .list_activies import ListActivies
+        from .list_activities import ListActivities
 
 
 
@@ -56,11 +56,11 @@ class UpdateActivitie(TkinterBase):
         self.button_add = Button(self.master, text="Atualizar", command=self.update_activitie, **button_style)
         self.button_add.grid(row=4, column=0, columnspan=2, padx=5, pady=5)
 
-        self.button_can = Button(self.master, text="Cancelar", command=lambda: self.open_window(ListActivies), **button_style)
+        self.button_can = Button(self.master, text="Cancelar", command=lambda: self.open_window(ListActivities), **button_style)
         self.button_can.grid()
 
     def update_activitie(self) -> None:
-        from .list_activies import ListActivies
+        from .list_activities import ListActivities
         
         try:
             data = UpdateActivitieDTO(
@@ -71,11 +71,11 @@ class UpdateActivitie(TkinterBase):
                 end_date=self.entry_end_date.get(),
                 created_at=self.item["created_at"],
             )
-            service = ActiviesService()
-            service.update_activie(data, data.activitie_id)
+            service = ActivitiesService()
+            service.update_activitie(data, data.activitie_id)
             messagebox.showinfo("Sucesso", "Atividade atualizada com sucesso!")
             self.master.destroy()
-            self.open_window(ListActivies, destroy=True)
+            self.open_window(ListActivities, destroy=True)
         except (ValidationError, ValueError) as e:
             if type(e) == ValueError:
                 messagebox.showerror("Erro", f"{e}")

@@ -1,12 +1,12 @@
 from tkinter import Tk, Label, Button, messagebox, Entry
 from pydantic import ValidationError
-from src.domain.dtos import ActiviesDTO
-from src.services import ActiviesService
+from src.domain.dtos import ActivitiesDTO
+from src.services import ActivitiesService
 from src.common.base import TkinterBase
 
 class AddActivitie(TkinterBase):
     def __init__(self, master: Tk) -> None:
-        from .list_activies import ListActivies
+        from .list_activities import ListActivities
         
 
 
@@ -48,11 +48,11 @@ class AddActivitie(TkinterBase):
         self.button_add = Button(self.master, text="Adicionar", command=self.add_activitie, **button_style)
         self.button_add.grid(row=4, column=0, columnspan=2, padx=5, pady=5)
 
-        self.button_can = Button(self.master, text="Cancelar", command=lambda: self.open_window(ListActivies), **button_style)
-        self.button_can.grid()
+        self.button_can = Button(self.master, text="Cancelar", command=lambda: self.open_window(ListActivities), **button_style)
+        self.button_can.grid(row=4, column=1, columnspan=2, padx=5, pady=5)
 
     def add_activitie(self) -> None:
-        from .list_activies import ListActivies
+        from .list_activities import ListActivities
         
         name = self.entry_name.get()
         start_date = self.entry_start_date.get()
@@ -60,13 +60,13 @@ class AddActivitie(TkinterBase):
         description = self.entry_description.get()
 
         try:
-            dto = ActiviesDTO(name=name, start_date=start_date, end_date=end_date, description=description)
+            dto = ActivitiesDTO(name=name, start_date=start_date, end_date=end_date, description=description)
 
-            service = ActiviesService()
-            service.create_activie(dto)
+            service = ActivitiesService()
+            service.create_activitie(dto)
             messagebox.showinfo("Cadastro bem-sucedido", "Atividade cadastrada com sucesso!")
             self.master.destroy()
-            self.open_window(ListActivies, destroy=True)
+            self.open_window(ListActivities, destroy=True)
         except (ValidationError, ValueError) as e:
             if type(e) == ValueError:
                 messagebox.showerror("Erro", f"{e}")

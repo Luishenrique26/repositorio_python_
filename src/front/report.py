@@ -1,7 +1,7 @@
 from tkinter import Label, Tk, Button
 from src.common.base import TkinterBase
 from src.services.user_service import UserService
-from src.services import ActiviesService
+from src.services import ActivitiesService
 from src.common.utils import date_to_str, datetime_to_str
 import logging
 
@@ -20,16 +20,16 @@ class Report(TkinterBase):
         self.rows = []
 
         # Botão voltar
-        self.button_voltar = Button(self.master, text="Voltar", command=self.list_activie, **button_style)
+        self.button_voltar = Button(self.master, text="Voltar", command=self.list_activitie, **button_style)
         self.button_voltar.grid(row=0, column=0, padx=5, pady=5)
 
         # Renderiza usuários e atividades
         self.render_users()
         self.render_activities()
 
-    def list_activie(self):
-        from src.front.activies import ListActivies
-        return self.open_window(ListActivies)
+    def list_activitie(self):
+        from src.front.activities import ListActivities
+        return self.open_window(ListActivities)
 
     def render_users(self) -> None:
         headers = ["ID", "Nome de usuário", "email"]
@@ -55,8 +55,8 @@ class Report(TkinterBase):
         for col, text in enumerate(headers):
             Label(self.master, text=text, font=("Arial", 10, "bold"), bg="#2C3E50", fg="white").grid(row=self.next_row, column=col, padx=5, pady=5)
 
-        service = ActiviesService()
-        data = service.get_activies()
+        service = ActivitiesService()
+        data = service.get_activities()
         if not data:
             return
 

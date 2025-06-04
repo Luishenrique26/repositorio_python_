@@ -1,6 +1,6 @@
 from .auth_service import AuthService
 from .user_service import UserService
-from .activies_service import ActiviesService
+from .activities_service import ActivitiesService
 
 
-__all__ = ["AuthService", "UserService", "ActiviesService"]
+__all__ = ["AuthService", "UserService", "ActivitiesService"]
