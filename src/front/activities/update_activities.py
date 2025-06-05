@@ -57,7 +57,7 @@ class UpdateActivitie(TkinterBase):
         self.button_add.grid(row=4, column=0, columnspan=2, padx=5, pady=5)
 
         self.button_can = Button(self.master, text="Cancelar", command=lambda: self.open_window(ListActivities), **button_style)
-        self.button_can.grid()
+        self.button_can.grid(row=4, column=1, columnspan=2, padx=5, pady=5)
 
     def update_activitie(self) -> None:
         from .list_activities import ListActivities
