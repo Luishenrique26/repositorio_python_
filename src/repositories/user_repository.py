@@ -80,7 +80,7 @@ class UserRepository:
         }
 
 
-    def count():
+    def count(self):
         with conection_db() as cursor:
             query = cursor.execute(
                 """
