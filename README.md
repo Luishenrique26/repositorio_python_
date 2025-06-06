@@ -26,7 +26,7 @@ Esta aplicação tem como objetivo, gerenciar atividade por meio de um sistema d
 
 Cadastro e login de usuários
 
-Criação, edição e exclusão de atividades
+Criação, edição,descrição das atividades e exclusão de atividades
 
 Registro de data para cada atividade
 
